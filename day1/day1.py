@@ -21,18 +21,8 @@ l2.sort()
 
 s = list(zip(l1,l2))
 
-sum_tuple = lambda x: abs(x[1] - x[0])
-
-distance = 0
-for x in s:
-    distance += sum_tuple(x)
-
-similarity_score = 0
-
-for num in l1:
-    similarity_score += num * l2.count(num)
-
-#distance = functools.reduce(lambda x,y: sum_tuple(x) + sum_tuple(y), list(zip(l1,l2)) )
+distance = sum([abs(x[1] - x[0]) for x in s])
+similarity_score = sum([x * l2.count(x) for x in l1])
     
 print(f'The distance is {distance}')
 print(f'The similarity score is {similarity_score}')

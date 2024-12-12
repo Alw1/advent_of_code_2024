@@ -14,7 +14,6 @@ with open(args.source, 'r') as f:
     part2_regex = do_regex + '|' + dont_regex + '|' + mul_instr_regex
 
     text = f.read()
-    instructions = findall(mul_instr_regex, text)
     part2_instructions = findall(part2_regex, text)
 
     enabled = True
