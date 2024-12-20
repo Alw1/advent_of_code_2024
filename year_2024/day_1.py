@@ -11,10 +11,9 @@ class Puzzle:
         l2.sort()
 
         self.l1, self.l2 = l1, l2
-        self.s = list(zip(self.l1,self.l2))
 
     def part1(self):
-        return sum([abs(x[1] - x[0]) for x in self.s])
+        return sum([abs(x[1] - x[0]) for x in zip(self.l1, self.l2)])
 
     def part2(self):
         return sum([x * self.l2.count(x) for x in self.l1])

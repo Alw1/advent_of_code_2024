@@ -10,8 +10,6 @@ parser.add_argument('-c', '--create_new_year', type=int, help="Create folder and
 
 args = parser.parse_args()
 
-aoc_session = '53616c7465645f5fdce926d9642bd6788e9aba0eb56e5c0f47e7b3da5bfc8949f138b34367d7d167641567de8ea935f07fe56fabfe4d595683b35871ca8813e5'
-
 if __name__ == '__main__':
     
     if args.create_new_year is not None:
